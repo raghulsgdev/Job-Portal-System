@@ -1,0 +1,11 @@
+.saved-jobs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.saved-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}

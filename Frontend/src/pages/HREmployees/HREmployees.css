@@ -1,0 +1,14 @@
+.employees-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.employees-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}

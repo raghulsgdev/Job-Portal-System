@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    /* overflow: hidden; */
+}
+
+.user-login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/* LEFT PANEL */
+
+.user-left-panel {
+    width: 50%;
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 70px;
+    gap: 12px;
+}
+
+.user-icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    color: #6d28d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    /* margin-bottom: 5px; */
+}
+
+.user-left-panel h1 {
+    font-size: 50px;
+    line-height: 1.05;
+    text-align: center;
+    font-weight: 700;
+}
+
+.user-divider {
+    width: 180px;
+    height: 2px;
+    background: rgba(255, 255, 255, .35);
+    position: relative;
+    margin: 10px 0 14px;
+}
+
+.user-divider::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.user-description {
+    width: 72%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, .9);
+    margin-bottom: 14px;
+}
+
+.user-feature-card {
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 18px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(8px);
+    transition: .3s;
+}
+
+.user-feature-card:hover {
+    background: rgba(255, 255, 255, .18);
+}
+
+.user-feature-card svg {
+    font-size: 20px;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.user-feature-content h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.user-feature-content p {
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, .85);
+}
+
+/* RIGHT PANEL */
+
+.user-right-panel {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f7fb;
+    padding: 30px;
+}
+
+.user-login-card {
+    width: 500px;
+    background: #fff;
+    border-radius: 28px;
+    padding: 40px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .08);
+}
+
+.user-login-card h1 {
+    text-align: center;
+    font-size: 48px;
+    color: #16213e;
+    margin-bottom: 8px;
+}
+
+.user-login-card>p {
+    text-align: center;
+    color: #667085;
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.user-input-box {
+    height: 58px;
+    border: 2px solid #d9ddeb;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    margin-bottom: 18px;
+}
+
+.user-input-box svg {
+    color: #6d28d9;
+    font-size: 18px;
+    margin-right: 14px;
+}
+
+.user-input-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 17px;
+}
+
+.user-login-btn {
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-radius: 14px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+}
+
+.user-login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.user-login-links a {
+    text-decoration: none;
+    color: #5b4bff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media(max-width:992px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .user-login-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .user-left-panel,
+    .user-right-panel {
+        width: 100%;
+    }
+
+    .user-left-panel {
+        padding: 45px 25px;
+    }
+
+    .user-left-panel h1 {
+        font-size: 42px;
+    }
+
+    .user-description,
+    .user-feature-card {
+        width: 100%;
+    }
+
+    .user-login-card {
+        width: 90%;
+        max-width: 450px;
+        margin: 30px 0;
+    }
+
+}

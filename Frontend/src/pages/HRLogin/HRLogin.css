@@ -1,0 +1,27 @@
+.hr-login-banner {
+  background: var(--secondary-light);
+  color: var(--secondary);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-extra-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+  margin-top: -8px;
+}
+
+.forgot-link {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}

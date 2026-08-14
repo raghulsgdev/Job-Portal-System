@@ -1,0 +1,22 @@
+.notif-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.notif-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 20px 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.notif-card.unread {
+  border-left: 4px solid var(--primary);
+  background: #FAF5FF;
+}

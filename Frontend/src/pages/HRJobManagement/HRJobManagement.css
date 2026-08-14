@@ -1,0 +1,32 @@
+.job-mgmt-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.job-mgmt-table-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}
+
+.mgmt-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mgmt-table th, .mgmt-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+}
+
+.mgmt-table th {
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--bg-main);
+}

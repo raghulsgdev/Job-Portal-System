@@ -1,0 +1,8 @@
+.edit-job-box {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  max-width: 900px;
+}

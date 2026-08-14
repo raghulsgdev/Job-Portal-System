@@ -1,0 +1,9 @@
+.hr-register-badge {
+  color: var(--secondary);
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}

@@ -1,0 +1,155 @@
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background:
+        linear-gradient(180deg,
+            #3c23c6,
+            #24126e);
+    color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    /* overflow-y: auto; */
+}
+
+.dashboard-content{
+    flex:1;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.dashboard-content {
+    flex: 1;
+    overflow-x: auto;
+}
+
+/* Hide Scrollbar */
+
+.sidebar::-webkit-scrollbar {
+    width: 0;
+}
+
+/* LOGO */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 34px;
+}
+
+.logo-icon {
+    width: 75px;
+    height: 70px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icon svg {
+    font-size: 38px;
+}
+
+.logo-section h2 {
+    font-size: 1.4rem;
+}
+
+.logo-section p {
+    color: #d1d5db;
+}
+
+/* MENU */
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.menu li svg {
+    font-size: 20px;
+}
+
+/* HOVER */
+
+.menu li:hover {
+    background: rgba(255, 255, 255, .08);
+    transform: translateX(5px);
+}
+
+/* ACTIVE MENU */
+
+.menu .active {
+    background: linear-gradient(135deg,
+            #8b5cf6,
+            #6d4cff);
+    box-shadow: 0 10px 25px rgba(109, 76, 255, .35);
+}
+
+/* LOGOUT */
+
+.logout-btn {
+    margin-top: 10px;
+    color: #ffd4d4;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 0, 0, .1);
+}
+
+/* PROFILE */
+
+.profile-card {
+    margin-top: auto;
+    background: rgba(255, 255, 255, .08);
+    border-radius: 18px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* margin-bottom: 4px; */
+}
+
+.profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    color: #4f46e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.profile-card h4 {
+    font-size: .95rem;
+}
+
+.profile-card p {
+    font-size: .8rem;
+    color: #d1d5db;
+}
+
+.profile-card span {
+
+    font-size: .75rem;
+    color: #9ca3af;
+}
