@@ -20,3 +20,17 @@
   border-left: 4px solid var(--primary);
   background: #FAF5FF;
 }
+
+@media (max-width: 640px) {
+  .notif-page-container {
+    gap: 16px;
+  }
+
+  .notif-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
+    border-radius: var(--radius-lg);
+  }
+}

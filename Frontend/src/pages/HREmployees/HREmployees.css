@@ -12,3 +12,14 @@
   box-shadow: var(--shadow-md);
   overflow-x: auto;
 }
+
+@media (max-width: 640px) {
+  .employees-container {
+    gap: 16px;
+  }
+
+  .employees-card {
+    padding: 16px 12px;
+    border-radius: var(--radius-lg);
+  }
+}

@@ -65,3 +65,21 @@
   padding: 28px;
   flex: 1;
 }
+
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-header {
+    padding: 16px 20px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  .modal-body {
+    padding: 20px 16px;
+  }
+}

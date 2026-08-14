@@ -151,3 +151,35 @@
   font-size: 13px;
   cursor: default;
 }
+
+@media (max-width: 480px) {
+  .job-card-container {
+    padding: 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .job-card-header {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .job-company-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .job-title {
+    font-size: 15px;
+  }
+
+  .job-card-footer {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .job-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

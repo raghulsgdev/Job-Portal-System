@@ -22,3 +22,14 @@
   width: 100%;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .layout-main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .layout-page-body {
+    padding: 16px 12px;
+  }
+}

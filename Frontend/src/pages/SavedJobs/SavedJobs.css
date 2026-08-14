@@ -9,3 +9,14 @@
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
 }
+
+@media (max-width: 640px) {
+  .saved-jobs-container {
+    gap: 16px;
+  }
+
+  .saved-jobs-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

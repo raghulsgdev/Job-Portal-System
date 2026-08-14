@@ -6,3 +6,10 @@
   box-shadow: var(--shadow-md);
   max-width: 800px;
 }
+
+@media (max-width: 640px) {
+  .hr-settings-box {
+    padding: 20px 16px;
+    border-radius: var(--radius-lg);
+  }
+}

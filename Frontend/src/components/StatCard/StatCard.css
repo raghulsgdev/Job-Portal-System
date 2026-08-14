@@ -45,3 +45,25 @@
   color: var(--text-muted);
   margin-top: 4px;
 }
+
+@media (max-width: 480px) {
+  .stat-card-container {
+    padding: 16px 18px;
+    gap: 14px;
+    border-radius: var(--radius-lg);
+  }
+
+  .stat-icon-wrapper {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+
+  .stat-value {
+    font-size: 22px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+  }
+}

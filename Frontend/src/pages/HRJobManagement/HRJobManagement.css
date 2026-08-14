@@ -30,3 +30,20 @@
   color: var(--text-muted);
   background: var(--bg-main);
 }
+
+@media (max-width: 640px) {
+  .job-mgmt-container {
+    gap: 16px;
+  }
+
+  .job-mgmt-table-card {
+    padding: 16px 12px;
+    border-radius: var(--radius-lg);
+  }
+
+  .mgmt-table th, .mgmt-table td {
+    padding: 10px 12px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}

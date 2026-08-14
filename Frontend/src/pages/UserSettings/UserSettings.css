@@ -12,3 +12,14 @@
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
 }
+
+@media (max-width: 640px) {
+  .settings-container {
+    gap: 16px;
+  }
+
+  .settings-card {
+    padding: 20px 16px;
+    border-radius: var(--radius-lg);
+  }
+}

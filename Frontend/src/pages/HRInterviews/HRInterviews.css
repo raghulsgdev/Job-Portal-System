@@ -15,3 +15,17 @@
   align-items: center;
   gap: 20px;
 }
+
+@media (max-width: 640px) {
+  .interviews-container {
+    gap: 16px;
+  }
+
+  .interview-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    border-radius: var(--radius-lg);
+  }
+}

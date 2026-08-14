@@ -3,3 +3,9 @@
   flex-direction: column;
   gap: 28px;
 }
+
+@media (max-width: 640px) {
+  .hr-profile-container {
+    gap: 16px;
+  }
+}

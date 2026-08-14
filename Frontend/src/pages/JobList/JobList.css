@@ -144,3 +144,25 @@
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
 }
+
+@media (max-width: 640px) {
+  .job-list-layout {
+    gap: 16px;
+  }
+
+  .filter-sidebar {
+    padding: 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .results-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

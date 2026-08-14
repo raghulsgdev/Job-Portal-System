@@ -3,16 +3,17 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { 
   FiGrid, FiBriefcase, FiFileText, FiBookmark, FiUser, 
   FiSettings, FiLogOut, FiUsers, FiCalendar, FiBriefcase as FiJobs,
-  FiBell
+  FiBell, FiX
 } from 'react-icons/fi';
 import { useAuth } from '../../context/AuthContext';
 import './Sidebar.css';
 
-const Sidebar = ({ role }) => {
+const Sidebar = ({ role, isOpen, onClose }) => {
   const { logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    if (onClose) onClose();
     logout();
     navigate(role === 'hr' ? '/hr/login' : '/user/login');
   };
@@ -38,38 +39,46 @@ const Sidebar = ({ role }) => {
     { path: '/hr/settings', label: 'Settings', icon: <FiSettings /> },
   ];
 
-
   const links = role === 'hr' ? hrLinks : candidateLinks;
 
   return (
-    <aside className="sidebar-container">
-      <div className="sidebar-header">
-        <div className="sidebar-logo-icon">
-          <FiBriefcase />
+    <>
+      {isOpen && <div className="sidebar-backdrop" onClick={onClose} />}
+      <aside className={`sidebar-container ${isOpen ? 'mobile-open' : ''}`}>
+        <div className="sidebar-header">
+          <div className="sidebar-logo-icon">
+            <FiBriefcase />
+          </div>
+          <span className="sidebar-brand-name">CareerPulse</span>
+          {onClose && (
+            <button className="sidebar-close-btn" onClick={onClose} aria-label="Close menu">
+              <FiX />
+            </button>
+          )}
         </div>
-        <span className="sidebar-brand-name">CareerPulse</span>
-      </div>
 
-      <nav className="sidebar-nav">
-        {links.map((link) => (
-          <NavLink
-            key={link.path}
-            to={link.path}
-            className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
-          >
-            <span className="sidebar-icon">{link.icon}</span>
-            <span>{link.label}</span>
-          </NavLink>
-        ))}
-      </nav>
+        <nav className="sidebar-nav">
+          {links.map((link) => (
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={({ isActive }) => `sidebar-link ${isActive ? 'active' : ''}`}
+              onClick={() => onClose && onClose()}
+            >
+              <span className="sidebar-icon">{link.icon}</span>
+              <span>{link.label}</span>
+            </NavLink>
+          ))}
+        </nav>
 
-      <div className="sidebar-footer">
-        <button className="sidebar-logout-btn" onClick={handleLogout}>
-          <FiLogOut className="sidebar-icon" />
-          <span>Logout</span>
-        </button>
-      </div>
-    </aside>
+        <div className="sidebar-footer">
+          <button className="sidebar-logout-btn" onClick={handleLogout}>
+            <FiLogOut className="sidebar-icon" />
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+    </>
   );
 };
 

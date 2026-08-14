@@ -167,3 +167,62 @@
   color: var(--secondary);
   text-decoration: underline;
 }
+
+@media (max-width: 640px) {
+  .auth-layout-container {
+    padding: 16px 12px 32px;
+  }
+
+  .auth-card-box {
+    padding: 24px 18px;
+    margin-top: 10px;
+    border-radius: var(--radius-md);
+  }
+
+  .auth-header {
+    margin-bottom: 24px;
+  }
+
+  .auth-logo-badge {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .auth-title {
+    font-size: 22px;
+  }
+
+  .auth-subtitle {
+    font-size: 13px;
+  }
+
+  .auth-role-tabs {
+    margin-bottom: 20px;
+  }
+
+  .auth-role-tab {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+
+  .auth-form-group {
+    margin-bottom: 16px;
+  }
+
+  .auth-input {
+    padding: 12px 14px 12px 42px;
+    font-size: 14px;
+  }
+
+  .auth-input-icon {
+    left: 14px;
+    font-size: 16px;
+  }
+
+  .auth-submit-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

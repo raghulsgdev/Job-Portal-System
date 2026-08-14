@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { FiSearch, FiBell } from 'react-icons/fi';
+import { FiSearch, FiBell, FiMenu } from 'react-icons/fi';
 import { useAuth } from '../../context/AuthContext';
 import api from '../../services/api';
 import './Navbar.css';
 
-const Navbar = ({ searchPlaceholder, onSearch }) => {
+const Navbar = ({ searchPlaceholder, onSearch, onToggleMobileMenu }) => {
   const { user, hr, role } = useAuth();
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
@@ -41,6 +41,16 @@ const Navbar = ({ searchPlaceholder, onSearch }) => {
   return (
     <header className="navbar-container">
       <div className="navbar-left">
+        {onToggleMobileMenu && (
+          <button 
+            className="mobile-menu-toggle-btn" 
+            onClick={onToggleMobileMenu} 
+            title="Toggle Menu"
+            aria-label="Toggle menu"
+          >
+            <FiMenu />
+          </button>
+        )}
         <div className="navbar-search">
           <FiSearch className="navbar-search-icon" />
           <input

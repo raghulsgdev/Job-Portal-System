@@ -22,3 +22,14 @@
   width: 100%;
   margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .hr-layout-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .hr-page-body {
+    padding: 16px 12px;
+  }
+}
