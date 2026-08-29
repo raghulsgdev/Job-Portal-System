@@ -133,8 +133,15 @@ def user_reset_password(data: ResetPasswordSchema):
         (data.token, "user")
     )
 
-    if not token_entry or token_entry["expires_at"] < datetime.datetime.now():
-        raise HTTPException(status_code=400, detail="Invalid or expired reset token")
+    if not token_entry:
+        raise HTTPException(status_code=400, detail="Invalid reset token")
+    
+    expires_at = token_entry["expires_at"]
+    if isinstance(expires_at, str):
+        expires_at = datetime.datetime.fromisoformat(expires_at)
+        
+    if expires_at < datetime.datetime.now():
+        raise HTTPException(status_code=400, detail="Expired reset token")
     
     user = fetch_one("SELECT * FROM users WHERE id = %s", (token_entry["user_id"],))
     if not user:
@@ -243,8 +250,15 @@ def hr_reset_password(data: ResetPasswordSchema):
         (data.token, "hr")
     )
 
-    if not token_entry or token_entry["expires_at"] < datetime.datetime.now():
-        raise HTTPException(status_code=400, detail="Invalid or expired reset token")
+    if not token_entry:
+        raise HTTPException(status_code=400, detail="Invalid reset token")
+    
+    expires_at = token_entry["expires_at"]
+    if isinstance(expires_at, str):
+        expires_at = datetime.datetime.fromisoformat(expires_at)
+        
+    if expires_at < datetime.datetime.now():
+        raise HTTPException(status_code=400, detail="Expired reset token")
 
     hr_user = fetch_one("SELECT * FROM hr WHERE id = %s", (token_entry["user_id"],))
     if not hr_user:

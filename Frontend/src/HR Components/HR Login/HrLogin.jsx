@@ -2,7 +2,7 @@ import "./HRLogin.css";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
-import axios from "axios";
+import api from "../../services/api";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +19,7 @@ function HrLogin() {
 
     const handleChange = (e) => {
         setFormData({
-            ...FormData,
+            ...formData,
             [e.target.name]: e.target.value
         });
     };
@@ -28,9 +28,12 @@ function HrLogin() {
         e.preventDefault()
 
         try {
-            const res = await axios.post("http://127.0.0.1:8000/api/login/", formData)
+            const res = await api.post("/hr/login", {
+                email: formData.company_email,
+                password: formData.password
+            });
             console.log(res.data);
-            alert(`Login Successful. Welcome Back! ${res.data.hr_name}`)
+            alert(`Login Successful. Welcome Back! ${res.data.user?.name}`)
             
             
         } catch (error) {

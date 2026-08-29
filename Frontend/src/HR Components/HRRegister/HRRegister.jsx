@@ -6,7 +6,7 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import CallIcon from "@mui/icons-material/Call";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+import api from "../../services/api";
 
 function HRRegister() {
 
@@ -39,12 +39,13 @@ function HRRegister() {
         }
 
         try {
-            const res = await axios.post("http://127.0.0.1:8000/api/register/", {
-                hr_name: FormData.hr_name,
+            const res = await api.post("/hr/register", {
+                name: FormData.hr_name,
                 company_name: FormData.company_name,
-                company_email: FormData.company_email,
-                phone_number: FormData.phone_number,
+                email: FormData.company_email,
+                phone: FormData.phone_number,
                 password: FormData.password,
+                confirm_password: FormData.confirm_password
             })
             console.log(res.data);
             alert("Registration Successful")
