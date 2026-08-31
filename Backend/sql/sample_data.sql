@@ -22,14 +22,14 @@ SET FOREIGN_KEY_CHECKS = 1;
 -- 1. Insert Sample Candidates (Users)
 -- Password for all default accounts is: password123
 INSERT INTO users (id, name, email, password_hash, phone, headline, bio, location, resume_url) VALUES
-(1, 'Alex Rivera', 'candidate@example.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeg6Lruj3vjPGga31lW', '+1 (555) 234-5678', 'Senior Full Stack Developer (React & Python)', 'Passionate web developer with 5+ years of experience constructing scalable cloud web applications and REST APIs.', 'San Francisco, CA', '/uploads/resumes/sample_resume_alex.pdf'),
-(2, 'Sarah Jenkins', 'sarah.j@example.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeg6Lruj3vjPGga31lW', '+1 (555) 876-5432', 'UI/UX & Frontend Designer', 'Designing intuitive digital product experiences with high-level visual design and modern CSS interaction frameworks.', 'New York, NY', '/uploads/resumes/sample_resume_sarah.pdf'),
-(3, 'Michael Chen', 'michael.chen@example.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeg6Lruj3vjPGga31lW', '+1 (555) 432-1098', 'DevOps & Cloud Engineer', 'Kubernetes, Docker, AWS Specialist focusing on microservice optimization and CI/CD pipelines.', 'Austin, TX', '/uploads/resumes/sample_resume_michael.pdf');
+(1, 'Alex Rivera', 'candidate@example.com', '$2b$12$EETnujhUpfY4/pzbdb.Mzut3.bo.UgwLFzZQ4gv8tfsrbJOoVA96C', '+1 (555) 234-5678', 'Senior Full Stack Developer (React & Python)', 'Passionate web developer with 5+ years of experience constructing scalable cloud web applications and REST APIs.', 'San Francisco, CA', '/uploads/resumes/sample_resume_alex.pdf'),
+(2, 'Sarah Jenkins', 'sarah.j@example.com', '$2b$12$EETnujhUpfY4/pzbdb.Mzut3.bo.UgwLFzZQ4gv8tfsrbJOoVA96C', '+1 (555) 876-5432', 'UI/UX & Frontend Designer', 'Designing intuitive digital product experiences with high-level visual design and modern CSS interaction frameworks.', 'New York, NY', '/uploads/resumes/sample_resume_sarah.pdf'),
+(3, 'Michael Chen', 'michael.chen@example.com', '$2b$12$EETnujhUpfY4/pzbdb.Mzut3.bo.UgwLFzZQ4gv8tfsrbJOoVA96C', '+1 (555) 432-1098', 'DevOps & Cloud Engineer', 'Kubernetes, Docker, AWS Specialist focusing on microservice optimization and CI/CD pipelines.', 'Austin, TX', '/uploads/resumes/sample_resume_michael.pdf');
 
 -- 2. Insert Sample HRs
 INSERT INTO hr (id, name, email, password_hash, phone, company_name, company_role) VALUES
-(1, 'Elena Rostova', 'hr@techcorp.com', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeg6Lruj3vjPGga31lW', '+1 (555) 999-1122', 'TechCorp Systems', 'Head of Talent Acquisition'),
-(2, 'David Miller', 'david@innovatelabs.io', '$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeg6Lruj3vjPGga31lW', '+1 (555) 888-3344', 'Innovate Labs', 'Senior Technical Recruiter');
+(1, 'Elena Rostova', 'hr@techcorp.com', '$2b$12$EETnujhUpfY4/pzbdb.Mzut3.bo.UgwLFzZQ4gv8tfsrbJOoVA96C', '+1 (555) 999-1122', 'TechCorp Systems', 'Head of Talent Acquisition'),
+(2, 'David Miller', 'david@innovatelabs.io', '$2b$12$EETnujhUpfY4/pzbdb.Mzut3.bo.UgwLFzZQ4gv8tfsrbJOoVA96C', '+1 (555) 888-3344', 'Innovate Labs', 'Senior Technical Recruiter');
 
 -- 3. Insert Companies
 INSERT INTO company (id, hr_id, name, logo, website, location, description) VALUES

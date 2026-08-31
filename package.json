@@ -1,0 +1,11 @@
+{
+  "name": "job-portal-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Job Portal System with React Frontend and FastAPI Backend",
+  "scripts": {
+    "backend": "cd Backend && .\\venv\\Scripts\\python.exe main.py",
+    "frontend": "cd Frontend && npm run dev",
+    "setup:db": "cd Backend && .\\venv\\Scripts\\python.exe setup_mysql.py"
+  }
+}

@@ -16,10 +16,14 @@ def hash_password(password: str) -> str:
     return bcrypt.hashpw(pw_bytes, salt).decode('utf-8')
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
-    """Verify password using bcrypt."""
-    pw_bytes = plain_password.encode('utf-8')
-    hashed_bytes = hashed_password.encode('utf-8')
-    return bcrypt.checkpw(pw_bytes, hashed_bytes)
+    """Verify password using bcrypt safely."""
+    try:
+        pw_bytes = plain_password.encode('utf-8')
+        hashed_bytes = hashed_password.encode('utf-8')
+        return bcrypt.checkpw(pw_bytes, hashed_bytes)
+    except (ValueError, Exception):
+        return False
+
 
 def create_access_token(data: dict, expires_delta: Optional[datetime.timedelta] = None) -> str:
     to_encode = data.copy()
